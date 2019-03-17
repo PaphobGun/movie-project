@@ -1,0 +1,148 @@
+.info {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    grid-column: 2/4;
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+    'poster title title'
+    'poster director director'
+    'poster plot plot'
+    'poster actors actors'
+    'poster boxOffice boxOffice';
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-areas:
+        'poster poster'
+        'title title'
+        'director director'
+        'plot plot'
+        'actors actors'
+        'boxOffice boxOffice';
+    }
+
+
+
+    & span {
+        color: $color-primary;
+    }
+
+    &__poster {
+        grid-area: poster;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        &--img {
+            width: 100%;
+            
+            border-radius: .8rem;
+        }
+
+        &--imdb {
+            border-radius: .8rem;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            outline: none;
+            color: $color-primary;
+            background: $color-btn;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 50%;
+            justify-self: center;
+            margin-bottom: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 80%;
+        }
+    
+
+    }
+
+    &__title {
+        grid-area: title;
+
+        display: grid;
+        grid-gap: 3rem;
+        grid-template-columns: 1fr 1fr;
+
+        &--text {
+            grid-column: span 2;
+            font-size: 4rem;
+            font-weight: 600;
+            color: $color-primary;
+            text-align: center;
+            line-height: 1;
+            
+        }
+
+        &__box {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 5% 1fr 10%  1fr;
+        }
+
+        &--released {
+            grid-column: 2/3;
+            font-size: 2.5rem;
+        }
+
+        &--rated {
+            grid-column: 4/5;
+            font-size: 2.2rem;
+        }
+
+        &--runtime {
+            grid-column: 2/3;
+            font-size: 2.2rem;
+        }
+
+        &--imdbRating {
+            grid-column: 4/5;
+            font-size: 2.2rem;
+        }
+    }
+
+    &__director {
+        grid-area: director;
+        display: grid;
+        grid-template-columns: 5% 1fr 10%  1fr;
+
+        &--text {
+            grid-column: 2/3;
+            font-size: 2.2rem;
+        }
+
+        &--writer {
+            grid-column: 4/5;
+            font-size: 2.2rem;
+        }
+
+    }
+
+    &__plot {
+        grid-area: plot;
+        padding-left: 5%;
+        font-size: 2rem;
+    }
+
+    &__actors {
+        grid-area: actors;
+        margin-top: 3rem;
+    }
+
+    &__boxOffice {
+        grid-area: boxOffice;
+        margin-top: 3rem;
+    }
+
+}

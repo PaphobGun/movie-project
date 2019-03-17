@@ -1,0 +1,46 @@
+// Clear
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: $font-primary;
+  // 62.5% = 10 px
+  font-size: 62.5%;
+  line-height: 1.5;
+  color: $color-secondary;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 55%; // 8px/16px = 50% > 1rem = 8px
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; // 8px/16px = 50% > 1rem = 8px
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 45%; // 8px/16px = 50% > 1rem = 8px
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 36%; // 8px/16px = 50% > 1rem = 8px
+  }
+}
+
+body {
+  background: $color-bg;
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 3rem;
+  grid-template-columns: 1fr repeat(2, 50rem) 1fr;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 5% 1fr 1fr 5%;
+  }
+}
