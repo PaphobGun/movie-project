@@ -8,7 +8,7 @@ const renderInfo = async () => {
 
   try {
     // AJAX call to omdbapi for selected movie info
-    const res = await axios.get('http://www.omdbapi.com/?i=' + id + apiKey);
+    const res = await axios.get('https://www.omdbapi.com/?i=' + id + apiKey);
 
     const data = await res.data;
 
