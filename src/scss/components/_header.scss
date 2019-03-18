@@ -24,6 +24,14 @@
     font-size: 11rem;
     color: $color-primary;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 9rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 7rem;
+    }
   }
 
   &__api {
@@ -34,5 +42,5 @@
 }
 
 .header span {
-  color: #cc7524;
+  color: $color-theme;
 }

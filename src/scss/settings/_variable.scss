@@ -1,8 +1,8 @@
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;   // 1200px
-$bp-large: 56.25em;   // 900px
-$bp-medium: 50em;    // 800px;
-$bp-small: 40.625em;    // 650px;
+$bp-largest: 75em; // 1200px
+$bp-large: 56.25em; // 900px
+$bp-medium: 50em; // 800px;
+$bp-small: 40.625em; // 650px;
 $bp-smallest: 26.25em; // 420px;
 
 // FONT
@@ -11,10 +11,9 @@ $font-primary: 'Dosis', sans-serif;
 // COLORS
 $color-primary: #fff;
 $color-secondary: #abb7c4;
+$color-theme: #cc7524;
 $color-bg: #020d18;
-$color-form: #233A50;
-$color-phd: #8D9CAB; //color for placeholder
-$color-shadow: 0 1.5rem 2rem rgba(0,0,0,0.2);
-$color-btn: #DD003F;
-
-
+$color-form: #233a50;
+$color-phd: #8d9cab; //color for placeholder
+$color-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+$color-btn: #dd003f;

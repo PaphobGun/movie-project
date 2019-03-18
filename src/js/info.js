@@ -1,15 +1,19 @@
 const apiKey = '&apikey=48f5a1e7';
 const info = '.info';
 
-function renderInfo() {
+// render information of the selected movie
+const renderInfo = async () => {
+  // get the id from sessionStorage
   let id = sessionStorage.getItem('imdbID');
 
-  axios
-    .get('http://www.omdbapi.com/?i=' + id + apiKey)
-    .then(response => {
-      let data = response.data;
+  try {
+    // AJAX call to omdbapi for selected movie info
+    const res = await axios.get('http://www.omdbapi.com/?i=' + id + apiKey);
 
-      let markupInfo = `
+    const data = await res.data;
+
+    // Get the data to the dom
+    let markupInfo = `
         <div class="info__poster">
         <img class="info__poster--img" src="${
           data.Poster
@@ -63,11 +67,12 @@ function renderInfo() {
     </div>
         `;
 
-      $(info).html(markupInfo);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-}
+    // Put the markup to the DOM
+    $(info).html(markupInfo);
+  } catch {
+    alert(`Something is wrong with OMDBapi please try again later...`);
+  }
+};
 
+// When page is loaded call function to render selected movie info
 $(document).ready(renderInfo());
