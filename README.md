@@ -7,8 +7,6 @@ The web application that can search for movie detail about the director , writer
 
 This project is created by HTML, CSS (SCSS), Javascript ( jQuery/ axios ). Api for movie from OMDB.com.
 
-for the readable code please see inside "src" folder.
-
 ### About style
 
 I used pure CSS ( with SASS ) to stlye all of this no CSS framework involve.
